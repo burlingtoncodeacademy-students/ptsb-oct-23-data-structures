@@ -1,23 +1,29 @@
 //
-// ? Lesson: Object Methods
+// & Lesson: Object Methods
 //
 // * Basics:
 // * Functions that are built-in and can only be called on them (similar to how arrays have their own)
 // * Has access to the global scope and can reference itself using "this"
 //
+//
+// ? Advanced:
+// * - Has access to the "this" keyword which deals with current scope.
+// * - Closures are how Javascript handles scope and is related to "this".
+// * - Custom objects (properties/methods) can be manipulated in different ways such as "private" limiting access and usage.
+//
 
 //
-// ? Part #2:
+// & Part #2:
 // * Intermediate object access and using methods
 //
 
-// * Reading objects stored data
+// ? Reading objects stored data
 // * {LIVE_EXAMPLES}
 
-// * Checking objects for properties
+// ? Checking objects for properties
 // * {LIVE_EXAMPLES}
 
-// * Other built-in object methods to know
+// ? Other built-in object methods to know
 // * create()
 // * keys()
 // * values()
@@ -25,34 +31,34 @@
 // * is()
 // * {LIVE_EXAMPLES}
 
-// * Executing object methods
+// ? Executing object methods
 // * {LIVE_EXAMPLES}
 
-// * Adding custom methods to objects
+// ? Adding custom methods to objects
 // * {LIVE_EXAMPLES}
 
 /////////////////////////
 
-// ? Challenge #1:
+// & Challenge #1:
 // * Available at end of this lesson's section
 // * {CLASS_CODE_TIME}
 
 /////////////////////////
 
 //
-// ? Part #3:
+// & Part #3:
 // * Advanced concepts
 //
 
-// * Chaining object methods
+// ? Chaining object methods
 // * {LIVE_EXAMPLES}
 
-// * How to build a chainable method in an object
+// ? How to build a chainable method in an object
 // * {LIVE_EXAMPLES}
 
 /////////////////////////
 
-// ? Challenge #2:
+// & Challenge #2:
 // * Available at end of this lesson's section
 // * {CLASS_CODE_TIME}
 
