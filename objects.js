@@ -161,17 +161,7 @@ delete cars.cat; // This will not doing anything but it also will not error or w
 // - Delete one of the properties in your array's nested object using dot notation and bracket for the other
 
 // ! Answer
-const dog = {
-  sheds: true,
-  ears: 2,
-  feet: 4,
-  favoriteActivites: [{ bark: true, zoomies: true }],
-};
-
-dog.fuzzy = 'very fuzzy';
-
-delete dog.favoriteActivites[0].bark;
-delete dog.favoriteActivites[0][zoomies];
+// ! Your answer here
 
 /////////////////////////
 
@@ -217,41 +207,7 @@ cars.wheels.forEach(function (wheelNumber) {
 // - Use a ternary if you have not already
 
 // ! Answer:
-const holidays = {
-  total: 3,
-  names: ['birthday', 'valentines day', 'thanksgiving'],
-  celebrationTypes: {
-    fireworks: true,
-    dance: false,
-    party: {
-      dinner: true,
-      friends: 9,
-    },
-  },
-};
-
-for (const type in holidays.celebrationTypes) {
-  if (
-    type === 'party' &&
-    holidays.celebrationTypes.party &&
-    holidays.celebrationTypes.party.friends
-  ) {
-    console.log('friends', holidays.celebrationTypes[type].friends);
-  }
-}
-
-// Extra credit
-const celebrationTypes = holidays.celebrationTypes;
-
-for (const type in celebrationTypes) {
-  if (
-    type === 'party' &&
-    celebrationTypes.party &&
-    celebrationTypes.party.friends
-  ) {
-    console.log('friends', celebrationTypes[type].friends);
-  }
-}
+// ! Your answer here
 
 /////////////////////////
 
@@ -300,21 +256,7 @@ let netflix = {
 };
 
 // ! Answer
-netflix.seasonInfo.season3 = {
-  episodeInfo: [
-    { episode: 1, episodeName: 'Something' },
-    { episode: 2, episodeName: 'Something else' },
-  ],
-};
-
-netflix.seasonInfo.season3.numberOfEpisodes =
-  netflix.seasonInfo.season3.episodeInfo.length;
-
-console.log(netflix.seasonInfo.season3);
-
-// Extra credit
-netflix.totalSeason = Object.keys(netflix.seasonInfo).length;
-console.log(netflix);
+// ! Your answer here
 
 /////////////////////////
 
