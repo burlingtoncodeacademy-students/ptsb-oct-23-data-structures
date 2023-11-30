@@ -40,7 +40,7 @@ if (cars.hasOwnProperty('asdjkfnsd')) {
 }
 
 // Short version of checking properties (optional chaining)
-cars.features?.airCondition
+cars.features?.airCondition;
 
 // ? Other built-in object methods to know
 // * create()
@@ -59,13 +59,13 @@ const cars = {
   wheels: [1, 2, 3, 4],
 };
 
-gets all keys from object in array
+// gets all keys from object in array
 console.log(Object.keys(cars));
 
 // gets all values from the object in array
 console.log(Object.values(cars));
 
-use array loops to get into object data
+// use array loops to get into object data
 Object.keys(cars).forEach((key) => {
   console.log(key);
 });
@@ -105,8 +105,12 @@ console.log(cars.features);
 /////////////////////////
 
 // & Challenge #1:
-// * Available at end of this lesson's section
-// * {CLASS_CODE_TIME}
+// - Build a method that will look for an item in a particular list and only remove that item.
+// - Log the current items list and remove one item
+// - Log the updated list again with the removed item gone
+
+// !Answer
+// ! Your answer here
 
 /////////////////////////
 
@@ -124,8 +128,21 @@ console.log(cars.features);
 /////////////////////////
 
 // & Challenge #2:
-// * Available at end of this lesson's section
-// * {CLASS_CODE_TIME}
+// - Create an object with a boolean "status" property and a default value
+// - Add a custom method to get the status that can be chained
+// - Log the status boolean value when the method is called
+// - Check the object property "status" exists and then call your custom get status method using chaining
+//
+// - Create a picture object with a status (default false)
+// - Add two custom methods for getting the download status and another for changing it
+// - Getting the status logs the current status and is chainable method
+// - Changing the status logs it is changing and is chainable method
+// - Check that the picture has the status property
+// - If it has the property log that it does
+// - Call your pictures custom methods and change the status to true + get the latest status using chaining
+
+// ! Answer
+// ! Your answer here
 
 /////////////////////////
 
