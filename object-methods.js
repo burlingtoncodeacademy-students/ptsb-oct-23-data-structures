@@ -9,7 +9,6 @@
 // ? Advanced:
 // * - Has access to the "this" keyword which deals with current scope.
 // * - Closures are how Javascript handles scope and is related to "this".
-// * - Custom objects (properties/methods) can be manipulated in different ways such as "private" limiting access and usage.
 //
 
 //
@@ -17,11 +16,30 @@
 // * Intermediate object access and using methods
 //
 
-// ? Reading objects stored data
-// * {LIVE_EXAMPLES}
-
 // ? Checking objects for properties
-// * {LIVE_EXAMPLES}
+// const cats = [1, 2, 3];
+// console.log(cats[9999]);
+
+// const cars = {
+//   make: 'BMW',
+//   model: 'M6',
+//   features: {
+//     airCondition: true,
+//     steeringWheel: false,
+//   },
+//   wheels: [1, 2, 3, 4],
+// };
+
+// console.log(cars.features.airCondition);
+
+// if (cars.hasOwnProperty('asdjkfnsd')) {
+//   console.log(cars.features.airCondition);
+// } else {
+//   console.log('doesnt');
+// }
+
+// Short version of checking properties (optional chaining)
+// cars.features?.airCondition
 
 // ? Other built-in object methods to know
 // * create()
@@ -29,13 +47,59 @@
 // * values()
 // * fromEntries()
 // * is()
-// * {LIVE_EXAMPLES}
 
-// ? Executing object methods
-// * {LIVE_EXAMPLES}
+// const cars = {
+//   make: 'BMW',
+//   model: 'M6',
+//   features: {
+//     airCondition: true,
+//     steeringWheel: false,
+//   },
+//   wheels: [1, 2, 3, 4],
+// };
+
+// gets all keys from object in array
+// console.log(Object.keys(cars));
+
+// // gets all values from the object in array
+// console.log(Object.values(cars));
+
+// use array loops to get into object data
+// Object.keys(cars).forEach((key) => {
+//   console.log(key);
+// });
+
+// // split lines for both things
+// const getCarsKeys = Object.keys(cars);
+
+// getCarsKeys.forEach(function (key) {
+//   console.log(key);
+// });
 
 // ? Adding custom methods to objects
-// * {LIVE_EXAMPLES}
+const cars = {
+  make: 'BMW',
+  model: 'M6',
+  features: {
+    airCondition: true,
+    steeringWheel: false,
+  },
+  wheels: [1, 2, 3, 4],
+
+  addFeature: function (feature, val) {
+    console.log(feature, val);
+    // scoped to this object
+    this.features[feature] = val;
+    // scoped to the global version of this object
+    // cars.features[feature] = true;
+  },
+};
+
+cars.addFeature('heat', true);
+cars.addFeature('cold', false);
+
+console.log(cars);
+console.log(cars.features);
 
 /////////////////////////
 
