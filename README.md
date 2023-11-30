@@ -16,7 +16,7 @@ The setup will be the same each week.
 - Classes (classes.js, classes-methods.js)
 - State Machines & OOP Design (state-machines.js, oop.js)
 
-Challenges are included within each file. They will sometimes be completed during the lessons and the ones that are not are highly suggested to take on yourself out side of class to build your skills. Answers can be found in files labeled as `{file}.answers.js`.
+Challenges are included within each file. They will sometimes be completed during the lessons and the ones that are not are highly suggested to take on yourself out side of class to build your skills. Answers can be found in files named as `{file}.answers.js`.
 
 #### During Lessons
 
