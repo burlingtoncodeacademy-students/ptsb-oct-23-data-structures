@@ -65,7 +65,6 @@ const picture = {
     console.log('changing status to', status);
     this.status = status;
     console.log('new status', this.status);
-
     return this;
   },
 };
