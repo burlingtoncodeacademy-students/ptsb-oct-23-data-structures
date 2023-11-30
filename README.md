@@ -32,6 +32,9 @@ The final version of each file will be pushed to the repository after the lesson
 
 ---
 
+### Homework
+Assignments are published the day of and found here [Replit](https://replit.com/team/ptsb-oct-2023). They will be included at the bottom of each lesson's file which need to be completed including their specific link.
+
 ### Previous Units
 - Unit 1: HTML/CSS
 - Unit 2: Javascript Fundamentals
