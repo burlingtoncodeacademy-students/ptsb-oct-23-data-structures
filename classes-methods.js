@@ -92,11 +92,11 @@ const myDiaCircle = circleFromDiameter(20);
 console.log(myDiaCircle);
 
 /*
-    ? Static Factory Methods
+    ? Static Methods
+    * typically provided as utilities/helpers to an application
     * do not require instantiation with a new operator
     * create an instance of our class through its method
 */
-
 class CircleStaticFactoryFx {
   static createCircleUsingDiameter(diameter) {
     return new CircleStaticFactoryFx(diameter / 2);
@@ -116,3 +116,55 @@ const circleFromClass = new CircleStaticFactoryFx(20);
 // Accessing CircleStaticFactoryFx using "pass by reference" -> static method is visible
 const diaCircle = CircleStaticFactoryFx.createCircleUsingDiameter(40);
 console.log(diaCircle);
+
+/*
+    ? Static Fields
+    * typically properties that do not need to change as you create instances
+    * do not require instantiation with a new operator
+    * create an instance of our class through its method
+*/
+
+// Since a dog is always a pet we don't need to change it for each new Dog instance we create
+// Notice that this isn't using a key/value with a colon
+// Static fields must be the first thing in a class if they need to be declared
+// Remember that classes are not objects but templates for them
+// In a class this is how it expects the template to be designed vs what an object expects
+class Dog = {
+  type = 'pet'
+  constructor() {}
+}
+
+// You can only use strings, numbers, and falsy values (null, undefined)
+// Objects with no value when assigning are undefined
+class Dog {
+  bio;
+  type = 'pet';
+
+  getType() {
+    const typeObject = { type: this.type };
+    return typeObject;
+  }
+}
+
+const jesse = new Dog();
+console.log(jesse);
+console.log(jesse.bio); // Returns undefined
+console.log(jesse.type);
+console.log(jesse.getType());
+
+jesse.bio = '13/10 she is a great doggo, bork bork';
+console.log(jesse.bio);
+
+/*
+  ? Private Methods
+*/
+
+// Challenge
+// What do you think happens here? What reasons might we want private properties?
+class Dog {
+  #type = 'pet'
+  constructor() {}
+}
+
+const ralf = new Dog();
+ralf.#type = 'parent';
