@@ -1,4 +1,5 @@
-# PTSB Oct 23 - Unit 3: Data Structures
+![alt text](images/upright-logo.png)
+## PTSB Oct 23 - Unit 3: Data Structures
 
 **Setup**
 
