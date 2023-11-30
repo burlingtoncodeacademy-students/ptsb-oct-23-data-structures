@@ -5,6 +5,7 @@
 // * Functions that are built-in and can only be called on them (similar to how arrays have their own)
 // * Has access to the global scope and can reference itself using "this"
 //
+
 //
 // ? Advanced:
 // * - Has access to the "this" keyword which deals with current scope.
@@ -17,29 +18,29 @@
 //
 
 // ? Checking objects for properties
-// const cats = [1, 2, 3];
-// console.log(cats[9999]);
+const cats = [1, 2, 3];
+console.log(cats[9999]);
 
-// const cars = {
-//   make: 'BMW',
-//   model: 'M6',
-//   features: {
-//     airCondition: true,
-//     steeringWheel: false,
-//   },
-//   wheels: [1, 2, 3, 4],
-// };
+const cars = {
+  make: 'BMW',
+  model: 'M6',
+  features: {
+    airCondition: true,
+    steeringWheel: false,
+  },
+  wheels: [1, 2, 3, 4],
+};
 
-// console.log(cars.features.airCondition);
+console.log(cars.features.airCondition);
 
-// if (cars.hasOwnProperty('asdjkfnsd')) {
-//   console.log(cars.features.airCondition);
-// } else {
-//   console.log('doesnt');
-// }
+if (cars.hasOwnProperty('asdjkfnsd')) {
+  console.log(cars.features.airCondition);
+} else {
+  console.log('doesnt');
+}
 
 // Short version of checking properties (optional chaining)
-// cars.features?.airCondition
+cars.features?.airCondition
 
 // ? Other built-in object methods to know
 // * create()
@@ -48,33 +49,33 @@
 // * fromEntries()
 // * is()
 
-// const cars = {
-//   make: 'BMW',
-//   model: 'M6',
-//   features: {
-//     airCondition: true,
-//     steeringWheel: false,
-//   },
-//   wheels: [1, 2, 3, 4],
-// };
+const cars = {
+  make: 'BMW',
+  model: 'M6',
+  features: {
+    airCondition: true,
+    steeringWheel: false,
+  },
+  wheels: [1, 2, 3, 4],
+};
 
-// gets all keys from object in array
-// console.log(Object.keys(cars));
+gets all keys from object in array
+console.log(Object.keys(cars));
 
-// // gets all values from the object in array
-// console.log(Object.values(cars));
+// gets all values from the object in array
+console.log(Object.values(cars));
 
-// use array loops to get into object data
-// Object.keys(cars).forEach((key) => {
-//   console.log(key);
-// });
+use array loops to get into object data
+Object.keys(cars).forEach((key) => {
+  console.log(key);
+});
 
-// // split lines for both things
-// const getCarsKeys = Object.keys(cars);
+// split lines for both things
+const getCarsKeys = Object.keys(cars);
 
-// getCarsKeys.forEach(function (key) {
-//   console.log(key);
-// });
+getCarsKeys.forEach(function (key) {
+  console.log(key);
+});
 
 // ? Adding custom methods to objects
 const cars = {
