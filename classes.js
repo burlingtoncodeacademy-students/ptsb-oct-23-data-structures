@@ -87,3 +87,8 @@ let Mila = new House('1007 Orange St', 3, 2);
 
 console.log(LakeViewEast);
 console.log(Mila);
+
+//
+// ? Homework
+// Cake Factory - https://replit.com/team/ptsb-oct-2023/cake-factory
+//

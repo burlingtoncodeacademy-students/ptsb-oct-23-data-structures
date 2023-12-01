@@ -134,6 +134,7 @@ class Shape {
   // Misc lesson
   // enableSecrets is an argument for this function like we've done before
   // You can set default values doing the below ensuring we never allow secrets available from the start
+  // Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters
   getDimensions(enableSecrets = false) {
     if (!enableSecrets) {
       console.log('this is not the true size!');
@@ -189,3 +190,8 @@ class Shape {
 const circle = new Circle();
 // Oh hey, I see an underscore, this is private, I'm missing the # symbol
 circle._getDimensions();
+
+//
+// ? Homework
+// Cake Factory - https://replit.com/team/ptsb-oct-2023/cake-factory
+//
