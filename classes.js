@@ -23,6 +23,7 @@ class Learner {
     this.name = name;
     this.city = city;
     this.cohort = cohort;
+    this.scholarships = 7500;
   }
 }
 
@@ -34,19 +35,55 @@ const kelly = new Learner();
 console.log(bob);
 console.log(kelly);
 
-// Challenge
-// In the constructor if there is no name or cohort, it throw or logs an error
+/////////////////////////
+
+// & Challenge #1
+// In the constructor if there if the name is NOT 'Sammy', throw an error
+
+// ! Answer
+// ! Your answer here
+
+/////////////////////////
 
 // ? Prototype Chaining
 // Consider the "instance" again, it's a clone more or less of its parent class which is why typeof below logs object
 // Class = template for objects, instances = objects created by using the class following the template
+console.log(typeof bob);
+console.log(bob instanceof Learner);
+console.log(bob instanceof Object);
+console.log(bob instanceof Object);
 
 // ? Accessing object instance values
 // We can access, add, and update things just like our previous lesson
+bob.scholarships = 10000;
+bob.graduated = 'in progress';
+console.log(bob);
 
 // ? Class Expression
 // Remember this no different than assigning a variable
+// Were assigning a class to our House variable
+const House = class {
+  constructor(address, bedrooms, bathrooms) {
+    this.address = address;
+    this.bedrooms = bedrooms;
+    this.bathrooms = bathrooms;
+  }
+};
+
+let LakeViewEast = new House('1007 Orange St', 3, 2);
 
 // ? Named Class Expression
 // Equivalent to the above but has a name that can be referenced
 // Think about how a function can also be declared similarly - function(){} or function getHome(){}
+const apartment = class Apartment {
+  constructor(address, bedrooms, bathrooms) {
+    this.address = address;
+    this.bedrooms = bedrooms;
+    this.bathrooms = bathrooms;
+  }
+};
+
+let Mila = new House('1007 Orange St', 3, 2);
+
+console.log(LakeViewEast);
+console.log(Mila);
