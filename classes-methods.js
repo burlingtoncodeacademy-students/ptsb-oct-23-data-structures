@@ -149,15 +149,43 @@ class Shape {
   }
 
   // Only the class can call on this private method and private field
+  // It isn't uncommon to see underscore (_) used to prefix private methods to denote they are private, see additional note at bottom of this example
+  // History - OOP static languages like Java made this very popular
   #getTrueDimensions() {
     return this.width + this.height + this.#secretBaseSize;
   }
 }
 
-const Circle = new Shape('circle', 10, 10);
-console.log(Circle.#secretBaseSize);
-Circle.getTrueDimensions(); // Returns undefined
-Circle.#getTrueDimensions(); // Error
+const circle = new Shape('circle', 10, 10);
+console.log(circle.#secretBaseSize);
+circle.getTrueDimensions(); // Returns undefined
+circle.#getTrueDimensions(); // Error
 
-Circle.getDimensions();
-Circle.getDimensions(true);
+circle.getDimensions();
+circle.getDimensions(true);
+
+// Underscore (_) prefix for private methods
+// Imagine I changed #getTrueDimensions to be #_getTrueDimensions
+// Outside of this class, even though it still errors if called, this can be more clear denote easily its private incase you miss using the # symbol
+class Shape {
+  #getDimensions() {}
+}
+
+const circle = new Circle();
+circle.getDimensions();
+
+// VERSUS //
+class Shape {
+  #_getDimensions() {
+    /* function code */
+  }
+
+  getDimensions() {
+    // Oh hey, I see an underscore, this is private, I'm missing the # symbol
+    this._getDimensions();
+  }
+}
+
+const circle = new Circle();
+// Oh hey, I see an underscore, this is private, I'm missing the # symbol
+circle._getDimensions();
